@@ -25,7 +25,7 @@
 <!-- The JavaScript below provides for selection and action on objects, environment and audio -->
     <script type="text/javascript">
 // Audio squawk for the duck
-      var squawk = new Audio('https://rocketvirtual.com/A-Frame_WebXR/assets/mp3/duck.mp3');
+      var squawk = new Audio('assets/mp3/duck.mp3');
 // Function to execute onclick
       function fire_laser() {
 // Make Duck Quack sound
@@ -78,18 +78,18 @@ if(!playing) {
 <button id="playButton" type="button">Play Music</button>
     <!-- The music sound of the following open source classical Mozart .mp3 file.  If you replace, make sure it's open source or you have your own rights. -->
     <audio id="playAudio" autoplay loop>
-        <source src="https://rocketvirtual.com/A-Frame_WebXR/assets/mp3/MozartALittleNightMusic.mp3" type="audio/mpeg">
+        <source src="assets/mp3/MozartALittleNightMusic.mp3" type="audio/mpeg">
     </audio>
 <!-- used for creating Navmesh... see javascript component above <a-scene inspector-plugin-recast>  https://github.com/donmccurdy/aframe-inspector-plugin-recast-->
 <a-scene background="color: #FAFAFA">
 <a-assets>
             <!-- Our font -->
-            <a-asset-item id="optimerBoldFont" src="client/assets/fonts/optimer_bold.typeface.json"></a-asset-item>
+            <a-asset-item id="optimerBoldFont" src="assets/fonts/optimer_bold.typeface.json"></a-asset-item>
 <!-- Duck 3D GltF model -->
-            <a-asset-item id="duck" src="client/assets/gltf/Duck.glb"></a-asset-item>
+            <a-asset-item id="duck" src="assets/gltf/Duck.glb"></a-asset-item>
       </a-assets>
 <!-- nav-mesh: protecting us from running thru sphere, cube and cylinder  -->
-      <a-entity id="navmesh-Hello" gltf-model="client/assets/gltf/AdvHelloWorldnavmesh.gltf" visible="false" nav-mesh=""></a-entity>
+      <a-entity id="navmesh-Hello" gltf-model="assets/gltf/AdvHelloWorldnavmesh.gltf" visible="false" nav-mesh=""></a-entity>
 <!-- Basic movement and teleportation  -->
       <a-entity id="cameraRig" movement-controls="constrainToNavMesh: true;" navigator="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision; ignoreEntities: .clickable" position="0 0 0" rotation="0 0 0">
         <!-- camera -->
